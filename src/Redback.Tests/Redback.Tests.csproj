@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpiderWebFixture.cs" />
     <Compile Include="TestClasses\MonthArray.cs" />
+    <Compile Include="TestClasses\ParentChain.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\redback\Redback.csproj">
