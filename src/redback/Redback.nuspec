@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>redback</id>
+        <version>$version$</version>
+        <title>Redback</title>
+        <authors>neutmute</authors>
+        <projectUrl>https://github.com/neutmute/redback</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/neutmute/redback/master/SolutionItems/redback.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>$description$</description>
+        <language>en-US</language>
+        <tags></tags>
+    </metadata>
+</package>

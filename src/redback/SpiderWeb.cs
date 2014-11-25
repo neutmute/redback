@@ -245,7 +245,7 @@ namespace Redback
 
                 result.WasExceptionSwallowed = true;
             }
-            catch (Exception e2)
+            catch (Exception)
             {
                 throw;
             }

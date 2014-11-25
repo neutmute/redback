@@ -15,6 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D0E8A7
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{4DBC88A8-0E83-4034-8110-48D78970A8EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{E35EF304-396A-45AB-A253-D7CA19E33E0A}"
+	ProjectSection(SolutionItems) = preProject
+		SolutionItems\Properties\AssemblyInfo.cs = SolutionItems\Properties\AssemblyInfo.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,5 +39,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E35EF304-396A-45AB-A253-D7CA19E33E0A} = {4DBC88A8-0E83-4034-8110-48D78970A8EE}
 	EndGlobalSection
 EndGlobal
