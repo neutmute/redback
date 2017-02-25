@@ -182,3 +182,4 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+_artifacts/redback.tests.xml
