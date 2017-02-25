@@ -7,9 +7,10 @@ using System.Security;
 [assembly: AssemblyProduct("redback")]
 [assembly: InternalsVisibleTo("Redback.Tests")]
 #if DEBUG
-    [assembly: AssemblyConfiguration("Debug")]
-    [assembly: AssemblyInformationalVersion("1.0")]    // trigger pre release package
+[assembly: AssemblyConfiguration("Debug")]
+[assembly: AssemblyInformationalVersion("")]    // trigger pre release package
 #else
-    [assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyInformationalVersion("")]    // trigger pre release package
 #endif
 
