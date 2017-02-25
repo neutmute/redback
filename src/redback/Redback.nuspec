@@ -8,7 +8,7 @@
         <projectUrl>https://github.com/neutmute/redback</projectUrl>
         <iconUrl>https://raw.githubusercontent.com/neutmute/redback/master/SolutionItems/redback.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>$description$</description>
+        <description>Traverses an object graph with callbacks for custom inspection</description>
         <language>en-US</language>
         <tags></tags>
     </metadata>
