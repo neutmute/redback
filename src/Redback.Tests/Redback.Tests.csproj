@@ -52,6 +52,7 @@
     <Compile Include="SpiderWebFixture.cs" />
     <Compile Include="TestClasses\MonthArray.cs" />
     <Compile Include="TestClasses\ParentChain.cs" />
+    <Compile Include="ExtensionMethods\TypeExtensionsFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\redback\Redback.csproj">

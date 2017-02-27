@@ -45,6 +45,7 @@
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ExtensionMethods\MemberInfoList.cs" />
+    <Compile Include="ExtensionMethods\TypeExtensions.cs" />
     <Compile Include="Filters\BaseFilter.cs" />
     <Compile Include="ExtensionMethods\MemberInfoExtensions.cs" />
     <Compile Include="Filters\Filters.cs" />
