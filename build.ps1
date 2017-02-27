@@ -16,8 +16,21 @@ function init {
     $global:outputFolder = Join-Path $rootFolder _artifacts
     $global:msbuild = "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe"
 
+    
+    # Read App
+    if(!(Test-Path Env:\PackageVersion )){
+        $env:PackageVersion = $env:APPVEYOR_BUILD_VERSION
+    }
+    
+    # Default when no env vars
+    if(!(Test-Path Env:\PackageVersion )){
+        $env:PackageVersion = "1.0.0.0"
+    }
+    
+    
     _WriteOut -ForegroundColor $ColorScheme.Banner "-= $solutionName Build =-"
     _WriteConfig "rootFolder" $rootFolder
+    _WriteConfig "version" $env:PackageVersion
 }
 
 function restorePackages{
