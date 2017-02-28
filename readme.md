@@ -6,3 +6,6 @@
 Traverse a .NET object graph using reflection.
 
 Useful for analysing an object at runtime or generating code
+
+### Usage
+See [SpiderWebFixture.cs](https://github.com/neutmute/redback/blob/develop/src/Redback.Tests/SpiderWebFixture.cs) for examples
