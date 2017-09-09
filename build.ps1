@@ -38,14 +38,14 @@ function restorePackages{
     
     New-Item -Force -ItemType directory -Path $packagesFolder
     _DownloadNuget $packagesFolder
-    nuget restore
-    nuget install gitlink -SolutionDir "$rootFolder" -ExcludeVersion
+    dotnet restore
+    #nuget install gitlink -SolutionDir "$rootFolder" -ExcludeVersion
 }
 
 function nugetPack{
     _WriteOut -ForegroundColor $ColorScheme.Banner "Nuget pack"
     
-    New-Item -Force -ItemType directory -Path $outputFolder
+    New-Item -Force -ItemType directory -Path $outputFolder | Out-Null
 
     if(!(Test-Path Env:\nuget )){
         $env:nuget = nuget
@@ -57,7 +57,7 @@ function nugetPack{
     $packableProjects = @("Redback")
 
    $packableProjects | foreach {
-       nuget pack "$rootFolder\src\$_\$_.csproj" -o $outputFolder -IncludeReferencedProjects -p Configuration=$configuration -Version $env:PackageVersion
+       dotnet pack "$rootFolder\src\$_\$_.csproj" -o $outputFolder --configuration=$configuration /p:Version=$env:PackageVersion --include-source --include-symbols --no-build 
    }    
 }
 
@@ -75,9 +75,9 @@ function nugetPublish{
 function buildSolution{
 
     _WriteOut -ForegroundColor $ColorScheme.Banner "Build Solution"
-    & $msbuild "$rootFolder\$solutionName.sln" /p:Configuration=$configuration /verbosity:minimal
+    & dotnet build "$rootFolder\$solutionName.sln" /p:Configuration=$configuration /verbosity:minimal
 
-    &"$rootFolder\packages\gitlink\lib\net45\GitLink.exe" $rootFolder -u $sourceUrl
+   # &"$rootFolder\packages\gitlink\lib\net45\GitLink.exe" $rootFolder -u $sourceUrl
 }
 
 function executeTests{
@@ -92,7 +92,7 @@ function executeTests{
         $nunitConsole = "nunit3-console"
     }
 	    
-    & $nunitConsole .\src\Redback.Tests\bin\Release\Redback.Tests.dll `
+    & $nunitConsole .\src\Redback.Tests\bin\Release\net47\Redback.Tests.dll `
                 --result=$outputFolder\redback.tests.xml$testResultformat
 
 	        
@@ -101,7 +101,7 @@ function executeTests{
 
 init
 
-restorePackages
+#restorePackages
 
 buildSolution
 
